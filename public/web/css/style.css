@@ -1,0 +1,774 @@
+:root{
+    --primary-color: #97bd27;
+    --white-color: #fff;
+    --black-color: #000;
+    --text-color: #333;
+    --nav-height: 80px;
+}
+
+*{
+    box-sizing: inherit;
+}
+
+html{
+    font-size: 62.5%; /* 1 rem = 10px*/
+    line-height: 1.6rem;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+.app{
+    overflow: hidden;
+}
+
+/*---------------------------- HEADER---------------------- */
+.header{
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--white-color);
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.2);
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: var(--nav-height);
+}
+
+.nav__logo-link{
+    text-decoration: none;
+    color: transparent;
+    display: block;
+    line-height: 0;
+}
+
+.nav__logo--img{
+    width: 100px;
+}
+
+.nav__list{
+    display: flex;
+    text-align: center;
+    list-style: none;
+    padding-left: 0;
+    display: flex;
+}
+
+.nav__item-link{
+    text-decoration: none;
+    font-size: 1.6rem;
+    color: var(--black-color);
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 15px 10px;
+}
+
+.nav__item-link:hover{
+    color: var(--primary-color);
+}
+
+.nav-mobile-item--active .nav-mobile-link,
+.nav__item--active .nav__item-link{
+    color: var(--primary-color);
+}
+
+/*---------------------------- SLIDER ---------------------- */
+#slider{
+    position: relative;
+    margin-top: var(--nav-height);
+    padding-top: 40%;
+    background: url('/assets/img/farm2.jpg') bottom center / cover no-repeat;
+}
+
+.slider__text{
+    position: absolute;
+    top: 80px;
+    left: 0;
+    right: 0;
+    color: var(--white-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    user-select: none;
+}
+
+.text-heading{
+    text-transform: uppercase;
+    font-size: 3.6rem;
+    line-height: 3.6rem;
+    font-weight: 500;
+    margin-bottom: 30px;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.text-description{
+    text-transform: uppercase;
+    font-family: 'Dancing Script', cursive;
+    width: 70%;
+    line-height:9rem;
+    font-size: 6.3rem;
+    margin-bottom: 30px;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.text-footer{
+    width: 60%;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    margin-bottom: 30px;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.slider__btn{
+    text-transform: uppercase;
+    border: none;
+    padding: 12px 30px;
+    min-width: 140px;
+    border-radius: 2px;
+    color: var(--white-color);
+    font-size: 1.6rem;
+    font-weight:500;
+    background-color: var(--primary-color);
+}
+
+.slider__btn:hover{
+    color: var(--primary-color);
+    background-color: var(--white-color);
+    cursor: pointer;
+}
+
+/*------------------------------- Category --------------------------*/
+.category{
+    margin: 30px 0 60px;
+}
+
+.category__item{
+    margin-top: 30px;
+}
+
+.category__item-img{
+    padding-top: 60%;
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: top center;
+}
+
+.category__item-name{
+    font-size: 1.8rem;
+    font-weight:600;
+    color: var(--text-color);
+    text-transform: uppercase;
+}
+
+.category__item-description{
+    font-size: 1.4rem;
+    color: #666;
+}
+
+
+/*---------------------------- SESSION2 ---------------------- */
+.session2{
+    display: flex;
+    background-color: #fff6f2;
+}
+
+.session2__left{
+    width: 60%;
+}
+
+.session2__img{
+    padding-top: 70%;
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: top center;
+}
+
+.session2__right{
+    width: 40%;
+    padding: 45px 80px 0 60px;
+}
+
+.session2__heading{
+    font-size: 3rem;
+    line-height: 3.6rem;
+    text-transform: uppercase;
+    font-family: 'Dancing Script', cursive;
+    margin: 0;
+}
+
+.session2__title{
+    font-size: 1.4rem;
+    font-weight:500;
+}
+
+.session2__list{
+    list-style: none;
+    padding-left: 0;
+}
+
+.session2__item-name{
+    font-size: 1.8rem;
+    font-weight: 500;
+    color:var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.session2__item-description{
+    font-size: 1.4rem;
+    color: var(--text-color);
+    line-height: 2rem;
+}
+
+
+/*---------------------------- PRODUCT IMG ---------------------- */
+.nutrition__heading,
+.product__heading{
+    font-size: 2.1rem;
+    line-height: 3rem;
+    text-transform: uppercase;
+    font-family: 'Dancing Script', cursive;
+    margin: 60px 0 10px;
+    position: relative;
+}
+
+.product{
+    padding-bottom: 60px;
+}
+
+.product__heading::before{
+    position: absolute;
+    content:"";
+    top: calc(100% + 4px);
+    left: 0;
+    width: 300px;
+    display:block;
+    height: 1px;
+    background-color: var(--primary-color);
+}
+
+.product__img{
+    margin-top: 24px;
+    padding-top: 100%;
+    background-repeat: no-repeat;
+    background-size:contain;
+    background-position: top center;
+    transition: transform linear .1s;
+    will-change: transform;
+    border: 1px solid var(--primary-color);
+}
+
+.product__img:hover{
+    transform: translateY(-1px);
+    box-shadow: 0 1px 20px 0 rgba(0, 0, 0, 0.2);
+}
+
+/*---------------------------- INTRODUCE ---------------------- */
+.introduce__wrap{
+    background-color: #f7ebdc;
+    padding: 60px 0;
+}
+
+.introduce__heading{
+    font-size: 2.1rem;
+    line-height: 3rem;
+    text-transform: uppercase;
+    font-family: 'Dancing Script', cursive;
+    position: relative;
+    margin: 0;
+}
+
+.introduce__heading::before{
+    position: absolute;
+    content:"";
+    top: calc(100% + 4px);
+    left: 0;
+    right: 0;
+    display:block;
+    height: 2px;
+    background-color: var(--primary-color);
+}
+
+.introduce__img{
+    width: 100%;
+    margin-top: 30px;
+}
+
+.introduce__title{
+    color: var(--text-color);
+    font-size: 1.4rem;
+    text-align: justify;
+}
+
+.introduce-list{
+    list-style: none;
+    margin: 0;
+    padding-left: 20px;
+}
+
+.introduce-item__name{
+    font-size: 2rem;
+    font-weight: 500;
+    color: var(--white-color);
+    background-color: var(--primary-color);
+    padding: 12px 20px;
+}
+
+.introduce-item__description{
+    font-size:1.4rem;
+    color: var(--text-color);
+    display: block;
+    margin: 20px 0 20px;
+    text-align: justify;
+}
+
+.introduce-after{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: block;
+}
+
+.introduce-after2{
+    position: absolute;
+    border-radius: 30px;
+    top: 25px;
+    left: 25px;
+    right: 25px;
+    bottom: 120px;
+    background-color: var(--white-color);
+}
+
+.introduce-child{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+}
+.introduce-child__img{
+    width: 100%;
+    border-radius: 20px;
+}
+
+.introduce-child__name{
+    font-size: 1.6rem;
+    color: var(--text-color);
+    margin: 12px 0;
+}
+
+.introduce-child__description{
+    font-size: 1.4rem;
+    color: var(--text-color);
+}   
+
+/*------------------------- NUTRITION --------------------*/
+.nutrition{
+    padding: 24px 0 30px;
+}
+
+.nutrition__heading::before{
+    position: absolute;
+    content:"";
+    top: calc(100% + 4px);
+    left: 0;
+    width: 300px;
+    display:block;
+    height: 2px;
+    background-color: var(--primary-color);
+}
+
+.nutrition__img{
+    padding-top: 80%;
+    background-repeat: no-repeat;
+    background-size:contain;
+    background-position: top center;
+}
+
+.nutrition__name{
+    font-size: 2rem;
+    color: var(--text-color);
+    position: relative;
+}
+
+.nutrition__name::before{
+    content: "";
+    position: absolute;
+    top: calc(100% + 12px);
+    left: 0;
+    width: 100px;
+    height: 2px;
+    background-color: var(--primary-color);
+}
+
+.nutrition__title{
+    font-size: 1.4rem;
+}
+
+/* Footer */
+.footer{
+    padding: 16px 0 0;
+    border-top: 4px solid var(--primary-color);
+    background-color: var(--white-color);
+}
+.footer__heading{
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    color: var(--text-color);
+}
+
+.footer-list{
+    padding-left: 0;
+    list-style: none;
+}
+
+.footer-item__link{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: #737373;
+    padding: 3px 0;
+}
+
+.footer-item__link:hover{
+    color: var(--primary-color);
+}
+
+.footer-item__link span{
+    width: 25px;
+}
+
+.footer-item-icon{
+    font-size: 1.7rem;
+    margin: -1px 8px 0 0; 
+}
+
+.footer__download{
+    display: flex;
+}
+.footer__download-qr{
+    width: 80px;
+    height: 80px;
+    border: 1px solid #e2e2e2;
+}
+
+.footer__download-apps{
+    margin-left: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.footer__download-app-img{
+    height: 20px;
+}
+
+.footer__download-app-link{
+    padding: 3px 0;
+    text-decoration: none;
+    color: transparent;
+}
+
+.footer__bottom{
+    background-color: #f5f5f5;
+    padding: 12px 0;
+    margin-top: 36px;
+}
+.footer__text{
+    margin: 0;
+    text-align: center;
+    font-size: 1.4rem;
+    color: #737373;
+}
+
+
+/* Navbar Mobile */
+.nav-mobile-btn{
+    padding: 0;
+    display: none;
+}
+
+.nav-mobile-btn-icon{
+    font-size: 2.6rem;
+    color: var(--primary-color);
+    padding: 16px 0 16px 18px;
+    display: block;
+}
+
+.nav-mobile{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 320px;
+    max-width: 100%;
+    background-color: var(--white-color);
+    transform: translateX(100%);
+    opacity: 0;
+    transition: all linear .2s;
+}
+
+
+.openNav{
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.nav-mobile-close{
+    position: absolute;
+    font-size: 2.2rem;
+    color: #777;
+    top: 0;
+    right: 0;
+    padding: 12px 12px;
+}
+
+.nav-mobile-list{
+    margin-top: 50px;
+    list-style: none;
+    padding-left: 0;
+}
+
+.nav-mobile-link{
+    text-decoration: none;
+    color: var(--text-color);
+    display: block;
+    padding: 16px 40px;
+    font-size: 1.6rem;
+}
+
+/* .nav-mobile-link--active{
+    color: var(--primary-color);
+} */
+
+.nav__overlay{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: none;
+    animation: fadeIn linear .2s;
+}
+
+@keyframes fadeIn {
+    from { 
+        opacity:0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+.open{
+    display: block;
+}
+
+
+/* -------------------------Responsive--------------------------- */
+
+/* Mobile & Tablet*/
+@media (max-width: 1023px) {
+    .nav__list{
+        display: none;
+    }
+
+    .nav-mobile-btn{
+        display: block;
+    }
+    .session2 {
+        flex-direction: column;
+    }
+    .session2__left {
+        width: 100%;
+    }
+    .introduce-list {
+        padding-left: 0;
+    }
+}
+
+/* Tablet */
+@media(min-width: 740px) and (max-width: 1023px) {
+    .slider__text {
+        top: 25px;
+    }
+    .text-heading {
+        font-size: 2.8rem;
+        line-height: 3rem;
+        margin-bottom: 10px;
+    }
+    .text-description {
+        line-height: 4.3rem;
+        font-size: 3.2rem;
+        margin-bottom: 5px;
+    }
+    .text-footer {
+        font-size: 1.4rem;
+        line-height: 2rem;
+        margin-bottom: 10px;
+    }
+    
+    .session2__left {
+        width: 100%;
+    }
+    .session2__img {
+        padding-top: 52%;
+        margin-top: 60px;
+        background-size: contain;
+    }
+    .session2__right {
+        width: 100%;
+        padding: 45px 68px 50px 68px;
+    }
+    .session2__title,
+    .session2__heading {
+        text-align: center;
+    }
+
+    .introduce-after {
+        height: 560px;
+    }
+    .introduce-after2 {
+        left: 0;
+        right: 0;
+        bottom: 15px;
+    }
+    .introduce-child__img {
+        height: 400px;
+    }
+}
+
+
+/* Mobile */
+@media (max-width: 739px) {
+    .nav-mobile{
+        width: 100%;
+    }
+    #slider{
+        position: relative;
+        margin-top: var(--nav-height);
+        padding-top: 100%;
+        background: url('/assets/img/farm2.jpg') bottom center / cover no-repeat;
+    }
+    .slider__text {
+        top: 40px;
+    }
+    .text-heading {
+        font-size: 2.3rem;
+        line-height: 2.3rem;
+        margin-bottom: 20px;
+    }
+
+    .text-description {
+        width: 80%;
+        line-height: 2.9rem;
+        font-size: 2.5rem;
+        margin-bottom: 10px;
+    }
+
+    .text-footer {
+        width: 80%;
+        font-size: 1.4rem;
+        line-height: 2rem;
+        margin-bottom: 20px;
+    }
+
+    .nav-mobile-btn-icon {
+        padding: 16px 8px 16px 18px;
+    }
+
+    .nav__logo--img {
+        padding-left: 4px;
+    }
+
+    .category {
+        margin: 30px 0 30px;
+    }
+
+    .category__item{
+        margin: 0 8px 32px;
+    }
+    .category__item-name {
+        margin: 12px 0;
+    }
+
+    .session2__right {
+        width: 100%;
+        padding: 45px 8px 40px 8px;
+    }
+    #nutrition,
+    #product{
+        padding: 0 8px;
+    }
+
+    .nutrition__heading,
+    .product__heading {
+        margin: 40px 0 4px;
+    }
+    .introduce__wrap {
+        padding: 30px 8px;
+    }
+    .introduce-after {
+        height: 435px;
+    }
+
+    .introduce-after2 {
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+    .introduce__heading::before{
+        width: 300px;
+        height: 1px;
+    }
+
+    .nutrition__item{
+        margin-bottom: 16px;
+    }
+
+    .nutrition__img {
+        padding-top: 60%;
+        background-size: cover;
+    }
+    .nutrition__name {
+        margin: 12px 0 22px;
+        text-align: center;
+    }
+
+    .nutrition__name::before{
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .nutrition__title{
+        text-align: center;
+    }
+    .footer__content{
+        padding:0 8px;
+    }
+
+    .footer__heading{
+        text-align: center;
+    }
+
+    .footer-item__link{
+        justify-content: center;
+    }
+
+    .footer__download{
+        justify-content: center;
+    }
+
+    .footer__download-apps{
+        flex: unset;
+    }
+
+    .footer__download-app-link{
+        display: block;
+        padding: 6px 8px;
+    }
+}
